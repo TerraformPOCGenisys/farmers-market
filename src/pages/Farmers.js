@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import farmers from '../data/farmers';
 
 const Farmers = () => {
+  const [farmers, setFarmers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFarmers = async () => {
+      try {
+        const response = await fetch('https://localhost:7234/api/farmers');
+        const data = await response.json();
+        setFarmers(data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching farmers:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchFarmers();
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div>
       <h1 className="rainbow-text">Our Farmers</h1>
@@ -18,6 +40,6 @@ const Farmers = () => {
       </ul>
     </div>
   );
-}
+};
 
 export default Farmers;
