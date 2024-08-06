@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 const FarmerDetails = () => {
   const { id } = useParams();
   const [farmer, setFarmer] = useState(null);
@@ -9,7 +11,7 @@ const FarmerDetails = () => {
   useEffect(() => {
     const fetchFarmerDetails = async () => {
       try {
-        const response = await fetch(`https://localhost:7234/api/farmers/${id}`);
+        const response = await fetch(`${API_BASE_URL}/farmers/${id}`);
         const data = await response.json();
         setFarmer(data);
         setLoading(false);

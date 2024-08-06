@@ -218,5 +218,21 @@ input:focus, textarea:focus {
   background-color: #555;
 }
 
+button {
+  margin-left: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
 
 
