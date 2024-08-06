@@ -62,7 +62,7 @@ li {
   border-radius: 5px;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  border-image-source: linear-gradient(to right, red, orange, yellow, green, cyan, rgb(255, 0, 85));
 }
 
 li:hover {
@@ -146,9 +146,77 @@ input:focus, textarea:focus {
 
 .rainbow-text {
   font-size: 2em;
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(to right, red, orange, yellow, green,  rgb(255, 0, 85));
   -webkit-background-clip: text;
   color: transparent;
 }
+
+.farmer-list {
+  padding: 20px;
+}
+
+.farmer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.farmer-table th, .farmer-table td {
+  padding: 10px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+.farmer-table th {
+  background-color: #444;
+}
+
+.farmer-table tr:nth-child(even) {
+  background-color: #333;
+}
+
+.farmer-table tr:hover {
+  background-color: #555;
+}
+
+.details-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+
+.product-list {
+  padding: 20px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.product-table th, .product-table td {
+  padding: 10px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #444;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #333;
+}
+
+.product-table tr:hover {
+  background-color: #555;
+}
+
 
 

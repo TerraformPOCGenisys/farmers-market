@@ -34,7 +34,14 @@ const FarmerDetails = () => {
     <div>
       <h1 className="rainbow-text">{farmer.name} - {farmer.farmName}</h1>
       <p><strong>Location:</strong> {farmer.location}</p>
-      <p><strong>Products:</strong> {farmer.products.join(', ')}</p>
+      <h3>Products</h3>
+      <ul>
+        {farmer.products.map(product => (
+          <li key={product.id}>
+            <strong>{product.name}</strong>: {product.description} - ${product.price}
+          </li>
+        ))}
+      </ul>
       <p><strong>Contact:</strong> {farmer.contact}</p>
       <Link to="/farmers">Back to Farmers List</Link>
     </div>

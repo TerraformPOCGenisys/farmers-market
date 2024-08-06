@@ -26,19 +26,31 @@ const Farmers = () => {
   }
 
   return (
-    <div>
-      <h1 className="rainbow-text">Our Farmers</h1>
-      <ul>
+    <div className="farmer-list">
+    <h1>Farmers List</h1>
+    <table className="farmer-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Farm Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
         {farmers.map(farmer => (
-          <li key={farmer.id}>
-            <h2>{farmer.name} - {farmer.farmName}</h2>
-            <p>Location: {farmer.location}</p>
-            <p>Products: {farmer.products.join(', ')}</p>
-            <Link to={`/farmers/${farmer.id}`}>View Details</Link>
-          </li>
+          <tr key={farmer.id}>
+            <td>{farmer.id}</td>
+            <td>{farmer.name}</td>
+            <td>{farmer.farmName}</td>
+            <td>
+              <Link to={`/farmers/${farmer.id}`} className="details-link">View Details</Link>
+            </td>
+          </tr>
         ))}
-      </ul>
-    </div>
+      </tbody>
+    </table>
+  </div>
   );
 };
 

@@ -12,15 +12,15 @@ function App() {
     <Router>
       <nav>
         <Link to="/">Home</Link> | 
-        <Link to="/products">Products</Link> | 
-        <Link to="/vendors">Vendors</Link> | 
         <Link to="/farmers">Farmers</Link> |  {/* Add Farmers Link */}
+        <Link to="/products">Products</Link> | 
+        {/* <Link to="/vendors">Vendors</Link> |  */}
         <Link to="/contact">Contact</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/vendors" element={<Vendors />} />
+        {/* <Route path="/vendors" element={<Vendors />} /> */}
         <Route path="/farmers" element={<Farmers />} />  {/* Add Farmers Route */}
         <Route path="/farmers/:id" element={<FarmerDetails />} />  {/* Add FarmerDetails Route */}
         <Route path="/contact" element={<Contact />} />
