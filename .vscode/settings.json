@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/59689392-c7e6-42c3-bda0-bae0e35f9e15/resourceGroups/farmersmarket/providers/Microsoft.Web/sites/farmers-market",
+    "appService.deploySubpath": "public"
+}
