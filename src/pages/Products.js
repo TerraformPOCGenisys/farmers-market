@@ -79,7 +79,7 @@ const ProductListPage = () => {
                   product.description
                 )}
               </td>
-              <td>${product.price.toFixed(2)}</td>
+              <td>€{product.price.toFixed(2)}</td>
               <td>{product.isInStock ? 'In Stock' : 'Out of Stock'}</td>
               <td>
                 {product.isInStock && (
