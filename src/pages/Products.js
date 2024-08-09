@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const API_BASE_URL = 'https://farmers-api.azurewebsites.net/api';
+console.log(process.env.REACT_APP_API_BASE_URL);
 
 const ProductListPage = () => {
   const [products, setProducts] = useState([]);
