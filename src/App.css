@@ -1,7 +1,7 @@
 /* General styles */
 body {
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: #e0e0e0;
+  color: #4caf50;
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -32,7 +32,7 @@ div {
 
 /* Headings */
 h1, h2 {
-  color: #fff;
+  color:#4caf50;
 }
 
 /* Links */
@@ -87,4 +87,13 @@ input, textarea {
 input:focus, textarea:focus {
   border-color: #bb86fc;
   outline: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }

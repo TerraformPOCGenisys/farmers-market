@@ -6,10 +6,14 @@ import Vendors from './pages/Vendors';
 import Contact from './pages/Contact';
 import Farmers from './pages/Farmers';  // Import Farmers Page
 import FarmerDetails from './pages/FarmerDetails';  // Import FarmerDetails Page
+import './App.css';
+import './Navbar.css'; 
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
+      <Navbar/>
       <nav>
         <Link to="/">Home</Link> | 
         <Link to="/farmers">Farmers</Link> |  {/* Add Farmers Link */}
