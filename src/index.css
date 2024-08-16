@@ -1,7 +1,7 @@
 /* General styles */
 body {
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: #ffffff;
+  color: #000000;
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -37,7 +37,7 @@ nav a:hover::after {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  background:#20af0e;
   opacity: .5;
 }
 
@@ -48,7 +48,7 @@ div {
 
 /* Headings with rainbow text effect */
 h1, h2 {
-  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  background: 20af0e;
   -webkit-background-clip: text;
   color: transparent;
   animation: rainbow-animation 10s ease-in-out infinite;
@@ -56,17 +56,17 @@ h1, h2 {
 
 /* List items with gradient border */
 li {
-  background-color: #2a2a2a;
+  background-color: #ffffff;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, red, orange, yellow, green, cyan, rgb(255, 0, 85));
+  border-image-source: #20af0e;
 }
 
 li:hover {
-  background-color: #333;
+  background-color: #ffffff;
 }
 
 /* Button with rainbow border */
@@ -158,26 +158,26 @@ input:focus, textarea:focus {
 .farmer-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #2c2c2c;
-  color: #e0e0e0;
+  background-color: #ffffff;
+  color: #050505;
 }
 
 .farmer-table th, .farmer-table td {
   padding: 10px;
-  border: 1px solid #444;
+  border: 1px solid #ffffff;
   text-align: left;
 }
 
 .farmer-table th {
-  background-color: #444;
+  background-color: #ffffff;
 }
 
 .farmer-table tr:nth-child(even) {
-  background-color: #333;
+  background-color: #ffffff;
 }
 
 .farmer-table tr:hover {
-  background-color: #555;
+  background-color: #ffffff;
 }
 
 .details-link {
@@ -196,26 +196,26 @@ input:focus, textarea:focus {
 .product-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #2c2c2c;
-  color: #e0e0e0;
+  background-color: #ffffff;
+  color: var(--color-text);
 }
 
 .product-table th, .product-table td {
   padding: 10px;
-  border: 1px solid #444;
+  border: 1px solid #08db2b;
   text-align: left;
 }
 
 .product-table th {
-  background-color: #444;
+  background-color: #ffffff;
 }
 
 .product-table tr:nth-child(even) {
-  background-color: #333;
+  background-color: #ffffff;
 }
 
 .product-table tr:hover {
-  background-color: #555;
+  background-color: #ffffff;
 }
 
 button {
@@ -235,11 +235,11 @@ button:hover {
 
 :root {
   --color-bg: #0d1117;
-  --color-bg-secondary: #161b22;
-  --color-text: #c9d1d9;
+  --color-bg-secondary: #ffffff;
+  --color-text: #020202;
   --color-text-secondary: #8b949e;
   --color-accent: #58a6ff;
-  --color-border: #30363d;
+  --color-border: #239c05;
 }
 
 body {
@@ -253,7 +253,7 @@ body {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 9px solid #2fbd00;
 }
 
 .navbar ul {
@@ -320,18 +320,18 @@ body {
   margin-top: 20px;
   border-radius: 10px; /* Adds rounded corners */
   overflow: hidden; /* Ensures content stays within rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Optional: subtle shadow */
 }
 
 .farmer-table th,
 .farmer-table td {
-  border: 1px solid var(--color-border);
+  border: 1px solid #20af0e;
   padding: 10px;
   text-align: left;
 }
 
 .farmer-table th {
-  background-color: var(--color-bg-secondary);
+  background-color: #ffffff;
   color: var(--color-text-secondary);
 }
 
@@ -340,7 +340,7 @@ body {
 }
 
 .farmer-table tr:hover {
-  background-color: var(--color-bg-secondary);
+  background-color: #ffffff;
 }
 
 .farmer-table th:first-child {
@@ -378,7 +378,7 @@ body {
 
 .product-table th {
   background-color: var(--color-bg-secondary);
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 .product-table tr:nth-child(even) {

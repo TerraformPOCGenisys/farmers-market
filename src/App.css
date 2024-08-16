@@ -1,6 +1,6 @@
 /* General styles */
 body {
-  background-color: #e0e0e0;
+  background-color: #ffffff;
   color: #4caf50;
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -9,7 +9,7 @@ body {
 
 /* Navigation styles */
 nav {
-  background-color: #1e1e1e;
+  background-color: #ffffff;
   padding: 15px;
   border-bottom: 1px solid #333;
 }
@@ -51,34 +51,34 @@ ul {
 }
 
 li {
-  background-color: #2a2a2a;
+  background-color: #ffffff;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
 }
 
 li:hover {
-  background-color: #333;
+  background-color: #ffffff;
 }
 
 /* Button styles (if needed) */
 button {
-  background-color: #3a3a3a;
-  color: #e0e0e0;
+  background-color: #ffffff;
+  color: #000000;
   padding: 10px 15px;
-  border: none;
+  border: inherit;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #4a4a4a;
+  background-color: #ffffff;
 }
 
 /* Input fields (if needed) */
 input, textarea {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
+  background-color: #ffffff;
+  color: #bbb;
   border: 1px solid #333;
   padding: 10px;
   border-radius: 5px;
@@ -90,7 +90,7 @@ input:focus, textarea:focus {
 }
 
 .container {
-  padding: 20px;
+  padding: 10px 120px;
 }
 
 h1 {
