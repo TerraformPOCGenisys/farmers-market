@@ -1,13 +1,13 @@
 
-# BigBasket Clone
+# Farmers Market Clone
 
-This is a clone of BigBasket.com, an e-commerce platform for groceries. The project was built using React, Redux, and Chakra UI.
+This is a clone of Farmers Market.com, an e-commerce platform for groceries. The project was built using React, Redux, and Chakra UI.
 
 # Project Description
-The goal of this project was to recreate the essential features of BigBasket.com, such as product listings, a shopping cart, checkout, and payment. The project was developed as an individual project and took 5 days to complete. The project features responsive design for a seamless shopping experience on all devices.
+The goal of this project was to recreate the essential features of Farmers Market.com, such as product listings, a shopping cart, checkout, and payment. The project was developed as an individual project and took 5 days to complete. The project features responsive design for a seamless shopping experience on all devices.
 
 # Context
-BigBasket.com is a popular e-commerce platform for groceries in India. This clone was created to showcase my skills in building complex e-commerce applications and to provide a seamless shopping experience for users.
+Farmers Market.com is a popular e-commerce platform for groceries in India. This clone was created to showcase my skills in building complex e-commerce applications and to provide a seamless shopping experience for users.
 
 ## Tech Stack
 
@@ -72,4 +72,4 @@ The following features are included in this project:
 
 ![App Screenshot](https://user-images.githubusercontent.com/104342116/224605132-90983e61-fcd8-45fc-94ca-7b9c28a8a6dd.png)
 
-<a href="https://bigbasket-apnidukan.netlify.app/"  target="_blank" >For more Please visit my deployed link. </a>
+<a href="https://Farmers Market-apnidukan.netlify.app/"  target="_blank" >For more Please visit my deployed link. </a>
