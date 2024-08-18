@@ -1,0 +1,153 @@
+import {
+  Box,
+  Flex,
+  IconButton,
+  useDisclosure,
+  Image,
+  Button,
+  Badge,
+  Text,
+} from "@chakra-ui/react";
+import companylogo from '../assets/images/logo-new.png';
+
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useAuth0 } from "@auth0/auth0-react";
+import { HiShoppingCart } from "react-icons/hi";
+
+import backgroundColor from "./backgroundColor";
+import useShowToast from "../CustomHooks/useShowToast";
+
+const Links = ["Home", "Products"];
+
+const NavLink = ({ children }) => (
+  <Link
+    to={children === Links[0] ? "/" : children === Links[1] ? "/product" : null}
+  >
+    <Box
+      color="white"
+      cursor="pointer"
+      fontSize="large"
+      _hover={{
+        textDecoration: "underline",
+        color: "black",
+      }}
+    >
+      {children}
+    </Box>
+  </Link>
+);
+
+function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { ItemCount } = useSelector((store) => store.CartReducer);
+  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
+
+  const [showToast] = useShowToast();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      showToast("Login Successfully", "success");
+    }
+  }, [isAuthenticated]);
+
+  return (
+    <Box backgroundColor={backgroundColor} p={4}>
+      <Flex
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        _hover={{
+          cursor: "pointer",
+        }}
+      >
+        <IconButton
+          backgroundColor={backgroundColor}
+          size={"md"}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label={"Open Menu"}
+          display={{ md: "none" }}
+          onClick={isOpen ? onClose : onOpen}
+        />
+        <Flex alignItems={"center"} justifyContent={"space-evenly"}>
+          <Box
+            display="flex"
+            alignItems={"center"}
+            gap="10"
+            justifyContent={{
+              base: "center",
+              md: "normal",
+            }}
+          >
+            <Image
+              src= {companylogo}
+              alt="company-logo"
+              width={{
+                base: "100%",
+                sm: "40%",
+                md: "25%",
+              }}
+            />
+            <Box display={{ base: "none", md: "flex" }} gap="10">
+              {Links.map((link) => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+            </Box>
+          </Box>
+        </Flex>
+
+        <Flex alignItems={"center"} gap="30px">
+          {isAuthenticated ? (
+            <Flex flexDirection="column" gap="10px">
+              <Text fontSize="sm">Welcome {user.name}</Text>
+
+              <Button
+                backgroundColor={backgroundColor}
+                color="white"
+                border="1px solid #ccc"
+                _hover={{
+                  color: "black",
+                }}
+                onClick={() => {
+                  showToast("Logout Successfully", "success", 5000);
+                  logout({
+                    logoutParams: { returnTo: window.location.origin },
+                  });
+                }}
+              >
+                Logout
+              </Button>
+            </Flex>
+          ) : (
+            <Button
+              backgroundColor={backgroundColor}
+              color="white"
+              border="1px solid #ccc"
+              _hover={{
+                color: "black",
+              }}
+            >
+              Login
+            </Button>
+          )}
+
+          <Link to="/user/cart">
+            <Badge>{ItemCount}</Badge>
+            <HiShoppingCart size={40} />
+          </Link>
+        </Flex>
+      </Flex>
+
+      {isOpen ? (
+        <Box pb={4} display={{ md: "none" }}>
+          {Links.map((link) => (
+            <NavLink key={link}>{link}</NavLink>
+          ))}
+        </Box>
+      ) : null}
+    </Box>
+  );
+}
+export default Navbar;
