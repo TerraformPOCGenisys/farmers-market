@@ -152,7 +152,7 @@ input:focus, textarea:focus {
 }
 
 .farmer-list {
-  padding: 20px;
+  padding: 30px 140px;
 }
 
 .farmer-table {
@@ -190,7 +190,7 @@ input:focus, textarea:focus {
 }
 
 .product-list {
-  padding: 20px;
+  padding: 30px 140px;
 }
 
 .product-table {
