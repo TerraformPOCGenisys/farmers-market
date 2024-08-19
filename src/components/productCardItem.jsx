@@ -23,6 +23,7 @@ function ProductCardItem({
   index,
   img,
   title,
+  body,
   price,
   rating,
   category,
@@ -99,8 +100,13 @@ function ProductCardItem({
         border="0px solid red"
       >
         <Center>
-          <Text fontSize={textSize} noOfLines={1}>
+          <Text fontSize={textSize} noOfLines={2}>
             {title}
+          </Text>
+        </Center>
+        <Center>
+          <Text fontSize={textSize} noOfLines={3}>
+            Description: {body}
           </Text>
         </Center>
         <Flex gap={"2"} justifyContent="center">

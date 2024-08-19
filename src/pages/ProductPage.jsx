@@ -88,6 +88,7 @@ const Product = () => {
               index={index}
               img={item.img}
               title={item.title}
+              body={item.body}
               price={item.price}
               rating={item.rating}
               category={item.category}
