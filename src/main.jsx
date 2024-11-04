@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   >
     <Provider store={store}>
       <ChakraProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/farmers-market/">
           <App />
         </BrowserRouter>
       </ChakraProvider>
