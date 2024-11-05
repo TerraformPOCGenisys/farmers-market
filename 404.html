@@ -1,6 +1,7 @@
 <script>
   // Redirect any non-root route to index.html for client-side routing
   console.log(location);
+  debugger;
   if (window.location.pathname.endsWith("/product")) {
     sessionStorage.setItem("redirectedFromProductPage", "true");
     window.location.replace("/farmers-market/");
