@@ -2,8 +2,6 @@
     // Redirect any non-root route to index.html for client-side routing
     debugger;
     console.log(location);
-    if (location.pathname !== '/farmers-market/') {
-      location.replace('/farmers-market/' + location.pathname + location.search);
-    }
+    window.location.replace("/farmers-market/");
   </script>
   
