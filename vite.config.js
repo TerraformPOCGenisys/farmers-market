@@ -5,13 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/farmers-market/',
-  server: {
-    proxy: {
-      '/FarmersAPI': {
-        target: 'http://db-server-india.centralindia.cloudapp.azure.com/FarmersAPI/api',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
-  }
+  // server: {
+  //   proxy: {
+  //     '/FarmersAPI': {
+  //       target: 'http://db-server-india.centralindia.cloudapp.azure.com/FarmersAPI/api',
+  //       changeOrigin: true,
+  //       secure: false,
+  //     },
+  //   },
+  // }
 });
