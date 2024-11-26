@@ -11,7 +11,7 @@ import HandleLoading from "../components/HandleLoading";
 const Product = () => {
   const dispatch = useDispatch();
   const [URL, setURL] = useState(
-    "https://farmers-api.azurewebsites.net/api/bbproducts"
+    "https://db-server-india.centralindia.cloudapp.azure.com/FarmersAPI/api/bbproducts"
   );
   const { data, loading, error } = useSelector((store) => store.productReducer);
   const [isLoading, setisLoading] = useState(false);
